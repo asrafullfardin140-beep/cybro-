@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybro Marketing | Indi Style Demo</title>
+    <!-- Fonts matching Cybro -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Cybro Brand Colors */
+            --bg-dark: #07111f;
+            --bg-card: #0d1b2e;
+            --primary: #7c3aed;
+            --primary-glow: rgba(124, 58, 237, 0.3);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+            --border: rgba(255, 255, 255, 0.08);
+            --transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Minimal Navigation */
+        .indi-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            mix-blend-mode: difference;
+        }
+
+        .indi-nav .logo {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+
+        .indi-nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .indi-nav-links a {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            position: relative;
+            color: #fff;
+        }
+
+        .indi-nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .indi-nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Massive Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-glow {
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(80px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-body);
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(4rem, 12vw, 12rem);
+            font-weight: 800;
+            line-height: 0.85;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            color: var(--text-main);
+        }
+
+        .hero-title span {
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
+            display: block;
+        }
+
+        .hero-title span.filled {
+            color: var(--primary);
+            -webkit-text-stroke: 0;
+        }
+
+        /* Continuous Marquee */
+        .marquee-wrapper {
+            width: 100%;
+            background: var(--primary);
+            padding: 20px 0;
+            overflow: hidden;
+            display: flex;
+            position: relative;
+            transform: rotate(-2deg);
+            margin: 100px -20px 150px -20px;
+            width: 110vw;
+            box-shadow: 0 10px 40px rgba(124, 58, 237, 0.2);
+            z-index: 20;
+        }
+
+        .marquee {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll-left 20s linear infinite;
+        }
+
+        .marquee-content {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 0 20px;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Services Accordion / List */
+        .services-section {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 100px 50px;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .service-row-item {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 50px 0;
+            border-top: 1px solid var(--border);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .service-row-item:hover {
+            border-top-color: var(--primary);
+        }
+
+        .service-row-item:hover .service-name {
+            color: var(--primary);
+            padding-left: 20px;
+        }
+
+        .service-number {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .service-name {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            transition: var(--transition);
+        }
+
+        .service-desc {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-top: 20px;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .service-row-item:hover .service-desc {
+            opacity: 1;
+            max-height: 300px;
+            margin-top: 20px;
+        }
+
+        .btn-talk-outline {
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 10px 30px;
+            border-radius: 100px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            transition: var(--transition);
+        }
+
+        .btn-talk-outline:hover {
+            background: #fff;
+            color: var(--bg-dark);
+        }
+
+        /* Client Logos Pill */
+        .clients-marquee {
+            width: 90%;
+            max-width: 1400px;
+            margin: 100px auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            padding: 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .clients-marquee-inner {
+            display: flex;
+            gap: 50px;
+            animation: scroll-left 30s linear infinite;
+        }
+
+        .clients-marquee img {
+            height: 40px;
+            opacity: 0.6;
+            filter: grayscale(100%) brightness(200%);
+            transition: var(--transition);
+        }
+
+        .clients-marquee img:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        /* Shafaq Style Grid */
+        .grid-shafaq {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 150px;
+        }
+
+        .shafaq-item {
+            background: transparent;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .shafaq-item-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .shafaq-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .shafaq-item:hover .shafaq-item-img img {
+            transform: scale(1.05);
+        }
+
+        .shafaq-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .shafaq-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .item-content h3 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .item-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Large Clean Footer */
+        .indi-footer {
+            padding: 150px 50px 50px;
+            background: #040912;
+            text-align: center;
+        }
+
+        .indi-footer h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(4rem, 10vw, 10rem);
+            font-weight: 800;
+            line-height: 0.9;
+            margin-bottom: 50px;
+            letter-spacing: -0.05em;
+        }
+
+        .indi-footer a.btn-huge {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 20px 50px;
+            border-radius: 100px;
+            background: var(--primary);
+            color: #fff;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .indi-footer a.btn-huge:hover {
+            background: #fff;
+            color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) {
+            .grid-shafaq { grid-template-columns: repeat(2, 1fr); }
+            .hero-title { margin-bottom: 20px; }
+            .indi-nav { padding: 20px; }
+            .indi-nav-links { display: none; }
+        }
+        @media (max-width: 768px) {
+            .grid-shafaq { grid-template-columns: 1fr; }
+            .clients-marquee { padding: 15px; border-radius: 50px; }
+            .clients-marquee img { height: 25px; gap: 30px; }
+        }
+            .hero-title {
+                margin-bottom: 20px;
+            }
+            .indi-nav {
+                padding: 20px;
+            }
+            .indi-nav-links {
+                display: none; /* Switch to hamburger in real dev */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="indi-nav">
+        <div class="logo">CYBRO.</div>
+        <div class="indi-nav-links">
+            <a href="#work-section">Work</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-content">
+            <div class="hero-subtitle">Future-Proof Your Growth</div>
+            <h1 class="hero-title">
+                We Build <br>
+                <span>Digital</span>
+                <span class="filled">Empires.</span>
+            </h1>
+        </div>
+    </section>
+
+    <div class="marquee-wrapper">
+        <div class="marquee">
+            <div class="marquee-content">AI AUTOMATION &nbsp; • &nbsp; DIGITAL ADS &nbsp; • &nbsp; WEB DEVELOPMENT &nbsp; • &nbsp; LEAD GENERATION &nbsp; • &nbsp; SOCIAL MEDIA &nbsp; • &nbsp; </div>
+            <div class="marquee-content">AI AUTOMATION &nbsp; • &nbsp; DIGITAL ADS &nbsp; • &nbsp; WEB DEVELOPMENT &nbsp; • &nbsp; LEAD GENERATION &nbsp; • &nbsp; SOCIAL MEDIA &nbsp; • &nbsp; </div>
+        </div>
+    </div>
+
+    <section class="services-section">
+        <h2 class="section-title-large">Expertise.</h2>
+        
+        <div class="services-list">
+            <div class="service-row-item">
+                <div class="service-number">01</div>
+                <div>
+                    <div class="service-name">Paid Ads & Social Media</div>
+                    <div class="service-desc">
+                        Scale your brand’s reach and dominate the feed with data-driven Meta & Google Ads. We create high-converting campaigns to turn attention into consistent revenue.
+                        <br><br>
+                        <a href="#contact" class="btn-talk-outline">Let's Talk</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-row-item">
+                <div class="service-number">02</div>
+                <div>
+                    <div class="service-name">Lead Generation</div>
+                    <div class="service-desc">
+                        Stop chasing unqualified prospects. Our advanced lead generation funnels are engineered to deliver a predictable flow of sales-ready leads directly to your CRM.
+                        <br><br>
+                        <a href="#contact" class="btn-talk-outline">Let's Talk</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row-item">
+                <div class="service-number">03</div>
+                <div>
+                    <div class="service-name">AI Automation</div>
+                    <div class="service-desc">
+                        Reclaim countless hours of manual work and supercharge your team's efficiency. We build intelligent automations that handle customer engagement 24/7.
+                        <br><br>
+                        <a href="#contact" class="btn-talk-outline">Let's Talk</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-row-item">
+                <div class="service-number">04</div>
+                <div>
+                    <div class="service-name">Website Development</div>
+                    <div class="service-desc">
+                        Your website is your ultimate digital storefront. We design and develop lightning-fast, premium websites that command authority and turn visitors into paying clients.
+                        <br><br>
+                        <a href="#contact" class="btn-talk-outline">Let's Talk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Marquee inside Pill -->
+    <div class="clients-marquee">
+        <h3 style="margin-right: 50px; font-family: var(--font-heading); color: var(--text-main); font-weight: 500; font-size: 1.2rem; flex-shrink: 0;">Standing Tall with Our Clients</h3>
+        <div class="clients-marquee-inner">
+            <img src="logos/Mr-Chef-150x150.png" alt="Client">
+            <img src="logos/Park-Kebab-And-Pizza-House-150x150.png" alt="Client">
+            <img src="logos/Tasty-2-Go-150x150.png" alt="Client">
+            <img src="logos/Tasty-Pizza-Bite-150x150.png" alt="Client">
+            <img src="logos/King-Pizza-150x150.png" alt="Client">
+            <img src="logos/Mr-Chef-150x150.png" alt="Client">
+            <img src="logos/Park-Kebab-And-Pizza-House-150x150.png" alt="Client">
+            <img src="logos/Tasty-2-Go-150x150.png" alt="Client">
+            <img src="logos/Tasty-Pizza-Bite-150x150.png" alt="Client">
+            <img src="logos/King-Pizza-150x150.png" alt="Client">
+        </div>
+    </div>
+
+    <section class="section-container" id="work-section">
+        <h2 class="section-title-large">Selected Work.</h2>
+        
+        <div class="grid-shafaq">
+            <!-- Grid Item 1 -->
+            <a href="#project-detail" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <img src="portfolio/6.png" alt="High Ticket Funnel">
+                </div>
+                <p>Web Development</p>
+                <h3>High-Ticket Sales Funnel</h3>
+            </a>
+
+            <!-- Grid Item 2 -->
+            <a href="#project-detail" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <img src="portfolio/4__1_.png" alt="Social Media Creative">
+                </div>
+                <p>Ad Creative</p>
+                <h3>Social Meta Campaigns</h3>
+            </a>
+
+            <!-- Grid Item 3 -->
+            <a href="#project-detail" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <img src="portfolio/1.png" alt="Restaurant Campaign">
+                </div>
+                <p>Identity & Ads</p>
+                <h3>Restaurant Digital Growth</h3>
+            </a>
+
+            <!-- Grid Item 4 -->
+            <a href="#project-detail" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <img src="portfolio/8__1_.png" alt="Analytics Dashboard">
+                </div>
+                <p>Data & Automation</p>
+                <h3>Omni-Channel Dashboard</h3>
+            </a>
+            
+            <!-- Grid Item 5 -->
+            <a href="#project-detail" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <img src="portfolio/2.png" alt="E-Commerce">
+                </div>
+                <p>Lead Generation</p>
+                <h3>E-Commerce Scaling</h3>
+            </a>
+            
+            <!-- Grid Item 6 -->
+            <a href="#project-detail" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <img src="portfolio/5.png" alt="Thumb Stopping Video">
+                </div>
+                <p>Content Creation</p>
+                <h3>Viral TikTok Framework</h3>
+            </a>
+        </div>
+    </section>
+
+    <footer class="indi-footer">
+        <h2>Let's Talk.</h2>
+        <a href="#contact" class="btn-huge">Start a Project</a>
+    </footer>
+
+</body>
+</html>

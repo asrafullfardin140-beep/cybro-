@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <img id="logo" src="assets/images/logo_final.png" onload="process()">
+    <h2 id="status">Loading...</h2>
+    <textarea id="output" style="width:100%; height:500px;"></textarea>
+
+    <script>
+        async function process() {
+            const img = document.getElementById('logo');
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+
+            // Simple Thresholding for White Background Removal
+            // If pixel is very bright (part of background), make transparent.
+            // If pixel is darker (logo), make it PURE WHITE and OPAQUE.
+
+            for (let i = 0; i < data.length; i += 4) {
+                const r = data[i];
+                const g = data[i + 1];
+                const b = data[i + 2];
+                const a = data[i + 3];
+
+                // Luminance calculation
+                const brightness = (r + g + b) / 3;
+
+                if (brightness > 200) {
+                    // White background OR very light artifact -> Transparent
+                    data[i + 3] = 0; // Alpha
+                } else {
+                    // Darker part (Logo text/icon) -> Make Pure White
+                    data[i] = 255;   // R
+                    data[i + 1] = 255; // G
+                    data[i + 2] = 255; // B
+                    data[i + 3] = 255; // Alpha
+                }
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+
+            // Convert to Base64
+            const dataURL = canvas.toDataURL('image/png');
+            document.getElementById('output').value = dataURL;
+            document.getElementById('status').innerText = 'Complete';
+
+            // Also display it on page for visual check
+            const newImg = new Image();
+            newImg.src = dataURL;
+            newImg.style.background = 'black'; // Show against black
+            newImg.style.padding = '20px';
+            document.body.appendChild(newImg);
+        }
+    </script>
+</body>
+
+</html>

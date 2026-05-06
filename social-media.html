@@ -1,0 +1,2362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Marketing | Cybro Marketing</title>
+    <meta name="description"
+        content="Grow your brand with Cybro Marketing's social media services — content creation, paid ads, community management and real measurable results.">
+    <meta name="keywords"
+        content="social media marketing, paid social media, Facebook ads, Instagram ads, content creation, social media management, UK">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cybromarketing.com/social-media.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Social Media Marketing | Cybro Marketing">
+    <meta property="og:description"
+        content="Real results from social media — followers, engagement, and revenue that grow month over month.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #07111f;
+            --bg-2: #0d1b2e;
+            --bg-card: rgba(255, 255, 255, 0.04);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-h: rgba(139, 92, 246, 0.4);
+            --primary: #7c3aed;
+            --primary-g: rgba(124, 58, 237, 0.4);
+            --accent: #a78bfa;
+            --accent-g: rgba(167, 139, 250, 0.25);
+            --blue: #2563eb;
+            --cyan: #38bdf8;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --dim: #64748b;
+            --grad: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+            --grad-b: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+            --fh: 'Space Grotesk', sans-serif;
+            --fb: 'Outfit', sans-serif;
+            --ease: cubic-bezier(.4, 0, .2, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--fb);
+            line-height: 1.7;
+            overflow-x: hidden
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--fh);
+            font-weight: 700;
+            line-height: 1.2
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all .25s var(--ease)
+        }
+
+        ul {
+            list-style: none
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        .grad-text {
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .grad-text-b {
+            background: var(--grad-b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            padding: 4px 14px;
+            border: 1px solid rgba(167, 139, 250, .3);
+            border-radius: 30px;
+            background: rgba(167, 139, 250, .08)
+        }
+
+        .section {
+            padding: 90px 0
+        }
+
+        .section-hd {
+            text-align: center;
+            margin-bottom: 56px
+        }
+
+        .section-hd h2 {
+            font-size: clamp(1.9rem, 3vw, 2.8rem);
+            margin: 12px 0 14px
+        }
+
+        .section-hd p {
+            color: var(--muted);
+            font-size: 1.05rem;
+            max-width: 540px;
+            margin: 0 auto
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: var(--fb);
+            cursor: pointer;
+            border: none;
+            transition: all .25s var(--ease)
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 0 30px var(--primary-g)
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 50px var(--primary-g)
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 1.5px solid var(--border-h)
+        }
+
+        .btn-outline:hover {
+            background: rgba(167, 139, 250, .1);
+            border-color: var(--accent)
+        }
+
+        .btn-sm {
+            padding: 9px 22px;
+            font-size: .88rem
+        }
+
+        /* NAV */
+        .nav-wrap {
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center
+        }
+
+        .navbar {
+            width: 90%;
+            max-width: 1100px;
+            padding: 12px 32px;
+            border-radius: 100px;
+            background: rgba(7, 17, 31, .85);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border)
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .logo-mark {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1
+        }
+
+        .logo-mark .lg {
+            font-family: var(--fh);
+            font-weight: 800;
+            font-size: 26px;
+            color: #fff;
+            letter-spacing: -.5px
+        }
+
+        .logo-mark .sm {
+            font-family: var(--fb);
+            font-size: 9px;
+            color: rgba(255, 255, 255, .5);
+            letter-spacing: 2.5px;
+            text-transform: uppercase
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center
+        }
+
+        .nav-links>li>a:not(.btn) {
+            color: var(--muted);
+            font-size: .92rem;
+            font-weight: 500
+        }
+
+        .nav-links>li>a:not(.btn):hover {
+            color: #fff
+        }
+
+        .nav-item {
+            position: relative;
+            display: flex;
+            align-items: center
+        }
+
+        .drop-btn {
+            color: var(--muted);
+            font-size: .92rem;
+            font-weight: 500;
+            background: none;
+            border: none;
+            font-family: var(--fb);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color .2s;
+            padding: 6px 0
+        }
+
+        .drop-btn .ch {
+            font-size: .65rem;
+            transition: transform .3s var(--ease);
+            display: inline-block
+        }
+
+        .drop-btn.open {
+            color: #fff
+        }
+
+        .drop-btn.open .ch {
+            transform: rotate(180deg)
+        }
+
+        .drop-menu {
+            position: absolute;
+            top: calc(100% + 14px);
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            background: rgba(7, 17, 31, .98);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 8px;
+            min-width: 210px;
+            z-index: 2000;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .6);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .25s var(--ease), transform .25s var(--ease), visibility 0s .25s
+        }
+
+        .drop-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            transition: opacity .25s var(--ease), transform .25s var(--ease), visibility 0s
+        }
+
+        .drop-menu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 14px;
+            border-radius: 10px;
+            color: var(--muted);
+            font-size: .88rem;
+            font-weight: 500
+        }
+
+        .drop-menu a:hover,
+        .drop-menu a.active {
+            background: rgba(124, 58, 237, .15);
+            color: #fff
+        }
+
+        .d-ico {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: rgba(124, 58, 237, .2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            flex-shrink: 0
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px
+        }
+
+        .hamburger span {
+            width: 22px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: all .3s var(--ease)
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 70% 60% at 30% 40%, rgba(124, 58, 237, .18) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 80% 20%, rgba(167, 139, 250, .1) 0%, transparent 60%)
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at 30% 50%, black 0%, transparent 70%)
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1
+        }
+
+        .hero-text .tag {
+            margin-bottom: 18px
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+            letter-spacing: -.04em;
+            margin-bottom: 20px
+        }
+
+        .hero-text p {
+            color: var(--muted);
+            font-size: 1.1rem;
+            max-width: 460px;
+            margin-bottom: 36px
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap
+        }
+
+        /* Paid Social badge */
+        .paid-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #fff;
+            font-family: var(--fh);
+            font-weight: 700;
+            font-size: .85rem;
+            padding: 8px 18px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            letter-spacing: .04em
+        }
+
+        /* DASHBOARD VISUAL */
+        .hero-visual {
+            position: relative
+        }
+
+        .dashboard-wrap {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(167, 139, 250, .2);
+            box-shadow: 0 0 80px rgba(124, 58, 237, .2), 0 30px 60px rgba(0, 0, 0, .4)
+        }
+
+        .dashboard-wrap img {
+            width: 100%;
+            display: block;
+            border-radius: 20px
+        }
+
+        .dash-float {
+            position: absolute;
+            background: rgba(7, 17, 31, .9);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 12px 18px;
+            font-family: var(--fh);
+            white-space: nowrap;
+            backdrop-filter: blur(10px)
+        }
+
+        .dash-float .fv {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent)
+        }
+
+        .dash-float .fl {
+            font-size: .7rem;
+            color: var(--dim);
+            text-transform: uppercase;
+            letter-spacing: .08em
+        }
+
+        .df-1 {
+            top: -16px;
+            right: -16px
+        }
+
+        .df-2 {
+            bottom: -16px;
+            left: -16px
+        }
+
+        /* STATS ROW */
+        .stats-section {
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border)
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border)
+        }
+
+        .stat-card {
+            background: var(--bg);
+            padding: 32px 28px;
+            text-align: center
+        }
+
+        .stat-card .sv {
+            font-family: var(--fh);
+            font-size: 2.4rem;
+            font-weight: 800;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .stat-card .sl {
+            color: var(--muted);
+            font-size: .88rem;
+            margin-top: 4px
+        }
+
+        /* ADS DASHBOARD */
+        .ads-section {
+            padding: 90px 0
+        }
+
+        .ads-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center
+        }
+
+        .ads-text .tag {
+            margin-bottom: 16px
+        }
+
+        .ads-text h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            margin-bottom: 16px
+        }
+
+        .ads-text p {
+            color: var(--muted);
+            margin-bottom: 28px
+        }
+
+        .platform-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px
+        }
+
+        .ptab {
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: .85rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            transition: all .2s;
+            background: none;
+            font-family: var(--fb)
+        }
+
+        .ptab.active,
+        .ptab:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff
+        }
+
+        .ads-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px
+        }
+
+        .ab-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 7px;
+            background: rgba(124, 58, 237, .15);
+            border: 1px solid rgba(124, 58, 237, .3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px
+        }
+
+        .ads-bullets li span {
+            color: var(--muted);
+            font-size: .92rem
+        }
+
+        .ads-visual {
+            position: relative
+        }
+
+        .ads-visual img {
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: 0 0 60px rgba(37, 99, 235, .15)
+        }
+
+        /* PORTFOLIO SHOWCASE */
+        .portfolio-section {
+            padding: 90px 0;
+            background: linear-gradient(180deg, var(--bg) 0%, rgba(13, 27, 46, .8) 100%)
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px
+        }
+
+        .port-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all .3s var(--ease)
+        }
+
+        .port-card:hover {
+            transform: scale(1.03);
+            border-color: var(--border-h);
+            box-shadow: 0 0 40px rgba(124, 58, 237, .2)
+        }
+
+        .port-card-bg {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative
+        }
+
+        .port-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(7, 17, 31, .7);
+            opacity: 0;
+            transition: opacity .3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 20px;
+            text-align: center
+        }
+
+        .port-card:hover .port-card-overlay {
+            opacity: 1
+        }
+
+        .pco-title {
+            font-family: var(--fh);
+            font-weight: 700;
+            font-size: .95rem;
+            color: #fff
+        }
+
+        .pco-sub {
+            font-size: .8rem;
+            color: var(--muted)
+        }
+
+        .play-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, .3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem
+        }
+
+        /* Colour grid backgrounds — placeholder for real designs */
+        .pc-1 {
+            background: linear-gradient(135deg, #7c3aed, #a78bfa)
+        }
+
+        .pc-2 {
+            background: linear-gradient(135deg, #0f172a, #1e3a5f)
+        }
+
+        .pc-3 {
+            background: linear-gradient(135deg, #dc2626, #f97316)
+        }
+
+        .pc-4 {
+            background: linear-gradient(135deg, #059669, #34d399)
+        }
+
+        .pc-5 {
+            background: linear-gradient(135deg, #0284c7, #38bdf8)
+        }
+
+        .pc-6 {
+            background: linear-gradient(135deg, #7c3aed, #ec4899)
+        }
+
+        .port-label {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(7, 17, 31, .8);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: .05em;
+            color: rgba(255, 255, 255, .7);
+            backdrop-filter: blur(8px)
+        }
+
+        .port-type-video {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(239, 68, 68, .9);
+            border-radius: 6px;
+            padding: 3px 10px;
+            font-size: .7rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: .05em
+        }
+
+        .port-type-reel {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, #7c3aed, #ec4899);
+            border-radius: 6px;
+            padding: 3px 10px;
+            font-size: .7rem;
+            font-weight: 700;
+            color: #fff
+        }
+
+        /* Inner content for design cards */
+        .port-inner-text {
+            text-align: center;
+            padding: 20px
+        }
+
+        .port-inner-text h4 {
+            font-family: var(--fh);
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 6px
+        }
+
+        .port-inner-text p {
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .6)
+        }
+
+        .port-inner-icon {
+            font-size: 3rem;
+            margin-bottom: 12px
+        }
+
+        /* --- NEW PORTFOLIO MOCKUPS --- */
+        .mockup-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--bg-2);
+        }
+
+        /* 1. Restaurant Promo 1080x1080 */
+        .mockup-square {
+            width: 55%;
+            aspect-ratio: 1/1;
+            background: #0f172a;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.4s ease;
+        }
+
+        .port-card:hover .mockup-square {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .mockup-sq-img {
+            flex: 1;
+            background: radial-gradient(circle at center, #f59e0b 0%, #b45309 100%);
+            position: relative;
+        }
+
+        .mockup-sq-ui {
+            height: 28px;
+            background: #07111f;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            gap: 6px;
+        }
+
+        .mockup-avatar {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+
+        .mockup-line {
+            height: 3px;
+            border-radius: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            width: 30px;
+        }
+
+        .mockup-engagement {
+            position: absolute;
+            bottom: 35px;
+            right: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .mockup-bubble {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 0.55rem;
+            padding: 2px 6px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: floatUp 3s infinite ease-in-out alternate;
+            font-weight: bold;
+        }
+
+        .mockup-bubble:nth-child(2) {
+            animation-delay: 1.5s;
+        }
+
+        /* 2. Brand Reel 1080x1920 */
+        .mockup-vertical {
+            width: 35%;
+            aspect-ratio: 9/16;
+            background: #0f172a;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mockup-vert-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.9) 100%), linear-gradient(45deg, #1e3a8a, #0f172a);
+            background-size: 100% 200%;
+            animation: bgScroll 4s linear infinite alternate;
+        }
+
+        .mockup-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+            animation: playPulse 2s infinite ease-in-out;
+        }
+
+        .mockup-play::after {
+            content: "▶";
+            color: white;
+            font-size: 0.7rem;
+            margin-left: 2px;
+        }
+
+        .mockup-vert-ui {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+        }
+
+        .mockup-vert-text {
+            width: 80%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            margin-bottom: 4px;
+        }
+
+        .mockup-vert-sub {
+            width: 50%;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 2px;
+        }
+
+        /* 3. Flash Sale */
+        .mockup-story {
+            width: 35%;
+            aspect-ratio: 9/16;
+            background: linear-gradient(135deg, #ef4444, #991b1b);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .flash-badge {
+            background: white;
+            color: #dc2626;
+            font-weight: 900;
+            font-size: 0.55rem;
+            padding: 4px 6px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            animation: flashBlink 2s infinite;
+            letter-spacing: 0.05em;
+        }
+
+        .mockup-timer {
+            display: flex;
+            gap: 4px;
+        }
+
+        .timer-box {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-family: monospace;
+            font-size: 0.7rem;
+            padding: 3px;
+            border-radius: 3px;
+        }
+
+        /* 4. Ad Creative */
+        .mockup-ad {
+            width: 70%;
+            background: #1e293b;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mockup-ad-header {
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .mockup-ad-img {
+            height: 60px;
+            background: linear-gradient(45deg, #059669, #10b981);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mockup-ad-img::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: -10px;
+            width: 50px;
+            height: 50px;
+            border-top-right-radius: 100%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .mockup-ad-text {
+            padding: 8px;
+        }
+
+        .mockup-ad-text .mockup-line {
+            width: 90%;
+            margin-bottom: 4px;
+        }
+
+        .mockup-ad-btn {
+            width: 100%;
+            height: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin-top: 6px;
+        }
+
+        .ad-metric-badge {
+            position: absolute;
+            top: 40px;
+            right: -5px;
+            background: #10b981;
+            color: white;
+            font-size: 0.55rem;
+            font-weight: bold;
+            padding: 4px 6px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+            animation: riseMetric 3s infinite alternate ease-in-out;
+        }
+
+        /* 5. Brand Identity */
+        .mockup-brand {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .brand-asset {
+            position: absolute;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+        }
+
+        .asset-bizcard {
+            width: 70px;
+            height: 40px;
+            top: 35%;
+            left: 15%;
+            animation: brandFade1 4s infinite alternate;
+        }
+
+        .asset-profile {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            top: 25%;
+            right: 20%;
+            background: #0f172a;
+            border: 3px solid #38bdf8;
+            animation: brandFade2 4s infinite alternate;
+        }
+
+        .asset-banner {
+            width: 100px;
+            height: 35px;
+            bottom: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: brandFade3 4s infinite alternate;
+        }
+
+        /* 6. Viral Reel */
+        .mockup-viral {
+            width: 35%;
+            aspect-ratio: 9/16;
+            background: #07111f;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .viral-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #7c3aed, #ec4899);
+            opacity: 0.5;
+            animation: bgPulse 3s infinite alternate;
+        }
+
+        .viral-bubbles {
+            position: absolute;
+            right: 5px;
+            bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .v-bubble {
+            width: 18px;
+            height: 18px;
+            background: #ec4899;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.5rem;
+            animation: floatBubble 2s infinite ease-in;
+            opacity: 0;
+        }
+
+        .v-bubble:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .v-bubble:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .v-bubble:nth-child(3) {
+            animation-delay: 1.2s;
+        }
+
+        /* Portfolio CSS Keyframes */
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes bgScroll {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 0% 100%;
+            }
+        }
+
+        @keyframes playPulse {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+            }
+        }
+
+        @keyframes flashBlink {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.95);
+            }
+        }
+
+        @keyframes riseMetric {
+            0% {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-15px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes brandFade1 {
+
+            0%,
+            15% {
+                opacity: 0;
+                transform: translateY(10px) rotate(-15deg);
+            }
+
+            35%,
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(-10deg);
+            }
+        }
+
+        @keyframes brandFade2 {
+
+            0%,
+            35% {
+                opacity: 0;
+                transform: translateY(10px) scale(0.8);
+            }
+
+            55%,
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes brandFade3 {
+
+            0%,
+            55% {
+                opacity: 0;
+                transform: translate(-50%, 10px);
+            }
+
+            75%,
+            100% {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @keyframes floatBubble {
+            0% {
+                transform: translateY(15px) scale(0.8);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-30px) scale(1.1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes bgPulse {
+            0% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 0.7;
+            }
+        }
+
+        /* PROCESS */
+        .process-section {
+            padding: 90px 0
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px
+        }
+
+        .process-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px 22px;
+            position: relative;
+            overflow: hidden;
+            transition: all .3s var(--ease)
+        }
+
+        .process-card:hover {
+            border-color: var(--border-h);
+            transform: translateY(-4px)
+        }
+
+        .step-bg {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 5rem;
+            font-weight: 800;
+            font-family: var(--fh);
+            color: rgba(124, 58, 237, .1);
+            line-height: 1;
+            user-select: none
+        }
+
+        .step-ico {
+            font-size: 1.8rem;
+            margin-bottom: 14px
+        }
+
+        .process-card h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: 700
+        }
+
+        .process-card p {
+            color: var(--muted);
+            font-size: .85rem;
+            line-height: 1.6
+        }
+
+        /* PACKAGES */
+        .pkg-section {
+            padding: 90px 0;
+            background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%)
+        }
+
+        .pkg-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px
+        }
+
+        .pkg-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 36px 32px;
+            position: relative;
+            transition: all .3s var(--ease)
+        }
+
+        .pkg-card.featured {
+            border-color: rgba(124, 58, 237, .4);
+            background: rgba(124, 58, 237, .06)
+        }
+
+        .pkg-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--grad);
+            color: #fff;
+            font-size: .7rem;
+            font-weight: 700;
+            padding: 4px 16px;
+            border-radius: 20px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            white-space: nowrap
+        }
+
+        .pkg-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(124, 58, 237, .3)
+        }
+
+        .pkg-name {
+            font-family: var(--fh);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 6px
+        }
+
+        .pkg-price {
+            font-family: var(--fh);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 4px
+        }
+
+        .pkg-price span {
+            font-size: .9rem;
+            font-weight: 400;
+            color: var(--dim)
+        }
+
+        .pkg-desc {
+            color: var(--muted);
+            font-size: .85rem;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .pkg-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: .88rem;
+            color: var(--muted)
+        }
+
+        .pkg-check {
+            color: #22c55e;
+            font-size: .9rem;
+            margin-top: 2px;
+            flex-shrink: 0
+        }
+
+        .pkg-cta {
+            margin-top: 28px;
+            display: block;
+            text-align: center;
+            padding: 13px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: .9rem;
+            border: 1.5px solid var(--border-h);
+            color: var(--text);
+            transition: all .25s;
+            font-family: var(--fb)
+        }
+
+        .pkg-cta:hover,
+        .pkg-card.featured .pkg-cta {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 100px 0
+        }
+
+        .cta-box {
+            text-align: center;
+            padding: 80px 40px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(124, 58, 237, .12), rgba(167, 139, 250, .06));
+            border: 1px solid rgba(124, 58, 237, .2);
+            position: relative;
+            overflow: hidden
+        }
+
+        .cta-orb {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(124, 58, 237, .25), transparent 70%);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: blur(60px);
+            pointer-events: none
+        }
+
+        .cta-box h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 14px
+        }
+
+        .cta-box p {
+            color: var(--muted);
+            font-size: 1.05rem;
+            max-width: 480px;
+            margin: 0 auto 40px
+        }
+
+        .cta-note {
+            margin-top: 16px;
+            font-size: .82rem;
+            color: var(--dim)
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border)
+        }
+
+        .foot-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center
+        }
+
+        .foot-brand .lb {
+            font-family: var(--fh);
+            font-size: 1.3rem;
+            font-weight: 800
+        }
+
+        .foot-brand .ls {
+            color: var(--dim);
+            font-size: .85rem;
+            margin-top: 4px
+        }
+
+        .foot-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+
+        .foot-links a {
+            color: var(--dim);
+            font-size: .85rem
+        }
+
+        .foot-links a:hover {
+            color: var(--accent)
+        }
+
+        .foot-copy {
+            color: rgba(255, 255, 255, .15);
+            font-size: .72rem
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:900px) {
+
+            .hero-inner,
+            .ads-inner {
+                grid-template-columns: 1fr
+            }
+
+            .hero-visual,
+            .ads-visual {
+                display: none
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .pkg-grid {
+                grid-template-columns: 1fr
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:680px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(7, 17, 31, .98);
+                padding: 80px 24px 24px;
+                gap: 12px;
+                z-index: 999;
+                overflow-y: auto
+            }
+
+            .nav-links.mobile-open {
+                display: flex
+            }
+
+            .hamburger {
+                display: flex
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        /* ── EXPANDED CONTENT SECTIONS ── */
+        .content-section {
+            padding: 80px 20px;
+            border-top: 1px solid var(--border);
+            position: relative;
+        }
+
+        .content-section.alt-bg {
+            background: linear-gradient(180deg, var(--bg), var(--bg-2));
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--muted);
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 0 auto 60px auto;
+        }
+
+        /* Responsive Grids */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        /* Premium Modular Cards */
+        .info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: var(--ease) .3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 16px;
+            background: radial-gradient(circle at top right, var(--primary-g) 0%, transparent 60%);
+            opacity: 0;
+            transition: var(--ease) .3s;
+            z-index: -1;
+        }
+
+        .info-card:hover {
+            border-color: var(--border-h);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-card:hover::before {
+            opacity: 1;
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+            display: inline-block;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            color: var(--muted);
+        }
+
+        /* Process Steps */
+        .step-card {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .step-num {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--bg-2);
+            border: 2px solid var(--primary);
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+            box-shadow: 0 0 20px var(--primary-g);
+        }
+
+        /* FAQ Structure */
+        .faq-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-size: 1.25rem;
+            font-weight: 600;
+            font-family: var(--fh);
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .faq-a {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        @media(max-width:768px) {
+
+            .grid-3,
+            .grid-2,
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <div class="nav-wrap">
+        <nav class="navbar">
+            <div class="container nav-inner">
+                <a href="index.html" class="logo-mark">
+                    <span class="lg">CYBRO</span><span class="sm">MARKETING</span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li class="nav-item">
+                        <button class="drop-btn" id="dropBtn" aria-expanded="false">
+                            Services <span class="ch">▾</span>
+                        </button>
+                        <div class="drop-menu" id="dropMenu">
+                            <a href="social-media.html" class="active"><span class="d-ico">📱</span>Paid Ads & Social
+                                Media</a>
+                            <a href="lead-generation.html"><span class="d-ico">🎯</span>Lead Generation</a>
+                            <a href="ai-automation.html"><span class="d-ico">🤖</span>AI Automation</a>
+                            <a href="web-development.html"><span class="d-ico">💻</span>Website Development</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#results">Results</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact" class="btn btn-primary btn-sm">Book Audit</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <div class="paid-badge">📣 Paid Social</div>
+                    <h1>Unmute Your Brand.<br><span class="grad-text">Dominate the Feed.</span></h1>
+                    <p>Strategic social media marketing that turns followers into customers — backed by data,
+                        creativity, and relentless testing.</p>
+                    <div class="hero-cta">
+                        <a href="index.html#contact" class="btn btn-primary">Get My Free Strategy</a>
+                        <a href="#portfolio" class="btn btn-outline">See Our Work</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-wrap">
+                        <img src="social_dashboard.png" alt="Social Media Analytics Dashboard"
+                            onerror="this.parentElement.style.background='rgba(124,58,237,.1)';this.style.display='none'">
+                        <div class="dash-float df-1">
+                            <div class="fv">+26%</div>
+                            <div class="fl">Follower Growth</div>
+                        </div>
+                        <div class="dash-float df-2">
+                            <div class="fv">£246K</div>
+                            <div class="fl">Revenue Driven</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="sv">298K</div>
+                    <div class="sl">Followers Grown</div>
+                </div>
+                <div class="stat-card">
+                    <div class="sv">4.2×</div>
+                    <div class="sl">Average ROAS</div>
+                </div>
+                <div class="stat-card">
+                    <div class="sv">89K</div>
+                    <div class="sl">Monthly Reach</div>
+                </div>
+                <div class="stat-card">
+                    <div class="sv">18%</div>
+                    <div class="sl">Avg. Engagement Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADS DASHBOARD -->
+    <section class="ads-section" id="results">
+        <div class="container">
+            <div class="ads-inner">
+                <div class="ads-text">
+                    <span class="tag">Paid Ads</span>
+                    <h2>Meta & Google Ads<br><span class="grad-text-b">Results That Speak</span></h2>
+                    <p>We run precision paid campaigns across Meta and Google — targeting your ideal customer at the
+                        right moment, with the right message.</p>
+                    <div class="platform-tabs">
+                        <button class="ptab active">Meta Ads</button>
+                        <button class="ptab">Google Ads</button>
+                    </div>
+                    <ul class="ads-bullets">
+                        <li>
+                            <div class="ab-icon">🎯</div><span><strong style="color:#fff">Hyper-targeted
+                                    campaigns</strong> — reach your exact audience by interest, location, and
+                                behaviour</span>
+                        </li>
+                        <li>
+                            <div class="ab-icon">📊</div><span><strong style="color:#fff">Real-time reporting</strong> —
+                                see exactly where every pound is being spent and what it's returning</span>
+                        </li>
+                        <li>
+                            <div class="ab-icon">🔄</div><span><strong style="color:#fff">Continuous A/B
+                                    testing</strong> — we test creative, copy, and audiences every week to maximise
+                                ROAS</span>
+                        </li>
+                        <li>
+                            <div class="ab-icon">🚀</div><span><strong style="color:#fff">Retargeting funnels</strong> —
+                                bring back warm visitors and convert them into paying customers</span>
+                        </li>
+                    </ul>
+                    <a href="index.html#contact" class="btn btn-primary" style="margin-top:8px">Launch My Ads
+                        →</a>
+                </div>
+                <div class="ads-visual">
+                    <img src="ads_dashboard.png" alt="Meta and Google Ads Dashboard"
+                        onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / CREATIVE SHOWCASE -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-hd">
+                <span class="tag">Creative Portfolio</span>
+                <h2>Designs & Content <span class="grad-text">That Convert</span></h2>
+                <p>From scroll-stopping 1080×1080 graphics to high-retention Reels — here's a taste of what we create
+                    for our clients.</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Card 1: Design -->
+                <div class="port-card">
+                    <div class="port-card-bg pc-1">
+                        <div class="mockup-wrapper">
+                            <div class="mockup-square">
+                                <div class="mockup-sq-ui">
+                                    <div class="mockup-avatar"></div>
+                                    <div class="mockup-line"></div>
+                                </div>
+                                <div class="mockup-sq-img"></div>
+                                <div class="mockup-sq-ui" style="height: 36px; padding: 10px;">
+                                    <div class="mockup-line" style="width: 50%;"></div>
+                                </div>
+                                <div class="mockup-engagement">
+                                    <div class="mockup-bubble">❤️ +23</div>
+                                    <div class="mockup-bubble">💬 +5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port-label">Graphic Design</div>
+                    <div class="port-card-overlay">
+                        <div class="play-badge">🔍</div>
+                        <div class="pco-title">King Pizza — Summer Campaign</div>
+                        <div class="pco-sub">Feed post • 1080×1080 px</div>
+                    </div>
+                </div>
+                <!-- Card 2: Video/Reel -->
+                <div class="port-card">
+                    <div class="port-card-bg pc-2" style="background:linear-gradient(135deg,#0f172a,#1e3a8a)">
+                        <div class="mockup-wrapper">
+                            <div class="mockup-vertical">
+                                <div class="mockup-vert-bg"></div>
+                                <div class="mockup-play"></div>
+                                <div class="mockup-vert-ui">
+                                    <div class="mockup-vert-text"></div>
+                                    <div class="mockup-vert-sub"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port-type-reel">🎬 REEL</div>
+                    <div class="port-label">Video Content</div>
+                    <div class="port-card-overlay">
+                        <div class="play-badge">▶</div>
+                        <div class="pco-title">Park Kebab — Brand Story</div>
+                        <div class="pco-sub">Instagram Reel • 15 sec</div>
+                    </div>
+                </div>
+                <!-- Card 3: Design -->
+                <div class="port-card">
+                    <div class="port-card-bg pc-3">
+                        <div class="mockup-wrapper">
+                            <div class="mockup-story">
+                                <div class="flash-badge">LIMITED OFFER</div>
+                                <div class="mockup-timer">
+                                    <div class="timer-box">23</div>:<div class="timer-box">59</div>:<div
+                                        class="timer-box">10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port-label">Story Ad</div>
+                    <div class="port-card-overlay">
+                        <div class="play-badge">🔍</div>
+                        <div class="pco-title">Mr Chef — 50% Off Campaign</div>
+                        <div class="pco-sub">Instagram Story • 1080×1920</div>
+                    </div>
+                </div>
+                <!-- Card 4: Video Ad -->
+                <div class="port-card">
+                    <div class="port-card-bg pc-4">
+                        <div class="mockup-wrapper">
+                            <div class="mockup-ad">
+                                <div class="mockup-ad-header">
+                                    <div class="mockup-avatar"></div>
+                                    <div class="mockup-line"></div>
+                                </div>
+                                <div class="mockup-ad-img"></div>
+                                <div class="mockup-ad-text">
+                                    <div class="mockup-line"></div>
+                                    <div class="mockup-line" style="width: 60%"></div>
+                                    <div class="mockup-ad-btn"></div>
+                                </div>
+                                <div class="ad-metric-badge">Conversions +23%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port-type-video">VIDEO</div>
+                    <div class="port-label">Paid Ad</div>
+                    <div class="port-card-overlay">
+                        <div class="play-badge">▶</div>
+                        <div class="pco-title">Indian Flavour — Meta Ad</div>
+                        <div class="pco-sub">Facebook Feed • 1080×1080</div>
+                    </div>
+                </div>
+                <!-- Card 5: Design -->
+                <div class="port-card">
+                    <div class="port-card-bg pc-5">
+                        <div class="mockup-wrapper">
+                            <div class="mockup-brand">
+                                <div class="brand-asset asset-bizcard"></div>
+                                <div class="brand-asset asset-profile"></div>
+                                <div class="brand-asset asset-banner"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port-label">Branding</div>
+                    <div class="port-card-overlay">
+                        <div class="play-badge">🔍</div>
+                        <div class="pco-title">Chicken Grill — Brand Kit</div>
+                        <div class="pco-sub">Cover photo + highlights + posts</div>
+                    </div>
+                </div>
+                <!-- Card 6: Reel -->
+                <div class="port-card">
+                    <div class="port-card-bg pc-6">
+                        <div class="mockup-wrapper">
+                            <div class="mockup-viral">
+                                <div class="viral-bg"></div>
+                                <div class="viral-bubbles">
+                                    <div class="v-bubble">❤️</div>
+                                    <div class="v-bubble">💬</div>
+                                    <div class="v-bubble">🔥</div>
+                                </div>
+                                <div class="mockup-vert-ui">
+                                    <div class="mockup-vert-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port-type-reel">🎬 REEL</div>
+                    <div class="port-label">Organic Content</div>
+                    <div class="port-card-overlay">
+                        <div class="play-badge">▶</div>
+                        <div class="pco-title">The House Pizza — BTS Reel</div>
+                        <div class="pco-sub">TikTok + Reels • 37K views</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:40px">
+                <a href="index.html#contact" class="btn btn-outline">Request Our Full Portfolio →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-hd">
+                <span class="tag">How We Work</span>
+                <h2>From <span class="grad-text">Zero to Viral</span> in 4 Steps</h2>
+                <p>A clear, repeatable process that delivers results from week one.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="step-bg">01</div>
+                    <div class="step-ico">🔍</div>
+                    <h3>Audit & Strategy</h3>
+                    <p>We review your current social presence, competitors, and set a 90-day growth plan with clear
+                        KPIs.</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-bg">02</div>
+                    <div class="step-ico">🎨</div>
+                    <h3>Content Creation</h3>
+                    <p>Our design team produces branded graphics, Reels, and copy — reviewed and scheduled monthly.</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-bg">03</div>
+                    <div class="step-ico">🚀</div>
+                    <h3>Launch & Promote</h3>
+                    <p>We publish content, launch paid campaigns, and monitor performance daily — adjusting on the fly.
+                    </p>
+                </div>
+                <div class="process-card">
+                    <div class="step-bg">04</div>
+                    <div class="step-ico">📊</div>
+                    <h3>Report & Scale</h3>
+                    <p>Monthly reports with clear metrics — then we scale what's working and cut what isn't.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="pkg-section" id="packages">
+        <div class="container">
+            <div class="section-hd">
+                <span class="tag">Pricing</span>
+                <h2>Choose Your <span class="grad-text">Growth Plan</span></h2>
+                <p>Transparent, flexible pricing — no hidden fees or lock-in contracts.</p>
+            </div>
+            <div class="pkg-grid">
+                <div class="pkg-card">
+                    <div class="pkg-name">Starter</div>
+                    <div class="pkg-price">£399<span>/mo</span></div>
+                    <div class="pkg-desc">Perfect for businesses just starting with social media.</div>
+                    <ul class="pkg-features">
+                        <li><span class="pkg-check">✓</span>12 posts/month (FB + IG)</li>
+                        <li><span class="pkg-check">✓</span>5 Graphic + 1 Animated Reel</li>
+                        <li><span class="pkg-check">✓</span>GMB 5 posts/month</li>
+                        <li><span class="pkg-check">✓</span>Monthly strategy report</li>
+                        <li><span class="pkg-check">✓</span>Community replies (3x/week)</li>
+                    </ul>
+                    <a href="index.html#contact" class="pkg-cta">Get Started</a>
+                </div>
+                <div class="pkg-card featured">
+                    <div class="pkg-name">Growth</div>
+                    <div class="pkg-price">£699<span>/mo</span></div>
+                    <div class="pkg-desc">For businesses ready to scale with organic + paid.</div>
+                    <ul class="pkg-features">
+                        <li><span class="pkg-check">✓</span>20 posts/month (FB + IG + TikTok)</li>
+                        <li><span class="pkg-check">✓</span>4 Reels + 2 Stories/week</li>
+                        <li><span class="pkg-check">✓</span>Meta Ads management (up to £1,000 spend)</li>
+                        <li><span class="pkg-check">✓</span>Google My Business optimisation</li>
+                        <li><span class="pkg-check">✓</span>Bi-weekly performance reports</li>
+                        <li><span class="pkg-check">✓</span>Daily community management</li>
+                    </ul>
+                    <a href="index.html#contact" class="pkg-cta">Start Growing</a>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-name">Dominator</div>
+                    <div class="pkg-price">£1,199<span>/mo</span></div>
+                    <div class="pkg-desc">Full-service for brands that want to lead their niche.</div>
+                    <ul class="pkg-features">
+                        <li><span class="pkg-check">✓</span>Unlimited posts across all platforms</li>
+                        <li><span class="pkg-check">✓</span>6 Reels + 5 Stories/week + TikTok</li>
+                        <li><span class="pkg-check">✓</span>Meta + Google Ads (up to £5,000 spend)</li>
+                        <li><span class="pkg-check">✓</span>Influencer outreach (2/mo)</li>
+                        <li><span class="pkg-check">✓</span>Weekly live reporting dashboard</li>
+                        <li><span class="pkg-check">✓</span>Dedicated account manager</li>
+                    </ul>
+                    <a href="index.html#contact" class="pkg-cta">Go Dominator</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expanded Content Sections (Paid Ads Focus) -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Paid Ads: How It <span class="gradient-text">Works</span></h2>
+            <p class="section-subtitle">We don't just "boost posts." We engineer sophisticated, multi-stage advertising
+                funnels designed to acquire customers at the lowest possible cost.</p>
+            <div class="grid-3">
+                <div class="info-card step-card">
+                    <div class="step-num">1</div>
+                    <h3>Audience Engineering</h3>
+                    <p>We leverage advanced pixel data, lookalike modeling, and deep market research to pinpoint exact
+                        buyer personas before spending a single pound.</p>
+                </div>
+                <div class="info-card step-card">
+                    <div class="step-num">2</div>
+                    <h3>Creative & Copy Setup</h3>
+                    <p>Our creative team designs scroll-stopping ad graphics, UGC-style videos, and compelling
+                        direct-response copy that forces your audience to click.</p>
+                </div>
+                <div class="info-card step-card">
+                    <div class="step-num">3</div>
+                    <h3>Scaling & Optimization</h3>
+                    <p>Once we identify winning ad sets, we aggressively scale your budget while simultaneously A/B
+                        testing new creatives to prevent ad fatigue and drop CPL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Who Paid Ads Are <span class="gradient-text">For</span></h2>
+            <p class="section-subtitle">Paid advertising is the ultimate growth lever for businesses ready to inject
+                predictable scalability into their revenue model.</p>
+            <div class="grid-2">
+                <div class="info-card">
+                    <span class="info-icon">🛒</span>
+                    <h3>eCommerce Brands</h3>
+                    <p>Drive targeted traffic straight to your product pages with Dynamic Product Ads and advanced
+                        retargeting to maximize your Return on Ad Spend (ROAS).</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🏢</span>
+                    <h3>B2B Service Providers</h3>
+                    <p>Use highly targeted LinkedIn and Google Search intent campaigns to bypass gatekeepers and place
+                        your offer directly in front of company decision-makers.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📍</span>
+                    <h3>Local & Multi-Location Clinics</h3>
+                    <p>Dominate your local territory using geographically constrained Meta Ads to flood your reception
+                        desk with highly qualified consultation requests.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">💻</span>
+                    <h3>SaaS Companies</h3>
+                    <p>Scale your monthly recurring revenue by running high-value lead magnet and demo-booking funnels
+                        designed specifically for long-term customer acquisition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">What Makes Our Ads <span class="gradient-text">Different</span></h2>
+            <div class="grid-3">
+                <div class="info-card">
+                    <span class="info-icon">📊</span>
+                    <h3>Relentless Data Tracking</h3>
+                    <p>We set up bulletproof server-side tracking (CAPI) so we never lose attribution, even with the
+                        latest iOS privacy updates restricting pixel data.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🧪</span>
+                    <h3>Scientific A/B Testing</h3>
+                    <p>We test hundreds of variables—from headlines to button colors—ensuring we mathematically prove
+                        what works instead of guessing.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">💸</span>
+                    <h3>Total Budget Respect</h3>
+                    <p>We treat your ad spend like our own. We use tight daily budgets during the testing phase and only
+                        scale when the ROI metrics are overwhelmingly positive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Proven Campaign <span class="gradient-text">Outcomes</span></h2>
+            <p class="section-subtitle">Real numbers from active client campaigns managed by the Cybro advertising team.
+            </p>
+            <div class="grid-4 text-center">
+                <div class="info-card" style="text-align:center;">
+                    <h3 class="gradient-text" style="font-size:3rem;margin-bottom:10px;">350%</h3>
+                    <p>Average eCommerce ROAS</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <h3 class="gradient-text" style="font-size:3rem;margin-bottom:10px;">-45%</h3>
+                    <p>Cost-Per-Acquisition Drop</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <h3 class="gradient-text" style="font-size:3rem;margin-bottom:10px;">10x</h3>
+                    <p>Increase in Lead Volume</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <h3 class="gradient-text" style="font-size:3rem;margin-bottom:10px;">&pound;2M+</h3>
+                    <p>Ad Spend Managed Monthly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <h3 class="faq-q">What platforms do you advertise on?</h3>
+                    <p class="faq-a">We specialize in Meta (Facebook & Instagram), Google (Search, Performance Max &
+                        YouTube), LinkedIn, and TikTok. We choose the platform based entirely on where your specific
+                        audience congregates.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-q">Do I need to supply the ad creatives?</h3>
+                    <p class="faq-a">No. While we gladly use any high-quality brand assets you have, our in-house
+                        creative team designs all the graphics, writes the copy, and edits the videos needed for the
+                        campaigns.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-q">What is the minimum recommended ad spend?</h3>
+                    <p class="faq-a">To generate enough data for the algorithms to optimize properly, we typically
+                        recommend a minimum starting ad spend of £1,500 to £2,000 per month, depending on your industry
+                        and goals.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-q">How do I track my campaign performance?</h3>
+                    <p class="faq-a">You receive access to a live, 24/7 custom reporting dashboard. You can see your
+                        exact ad spend, cost per click, cost per acquisition, and total ROAS at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-orb"></div>
+                <span class="tag">Free Strategy Call</span>
+                <h2>Ready to <span class="grad-text">Grow Your Brand</span>?</h2>
+                <p>Book a free 30-minute strategy call — we'll audit your current social presence and show you exactly
+                    how to grow it.</p>
+                <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+                    <a href="index.html#contact" class="btn btn-primary">Book My Free Call →</a>
+                    <a href="#portfolio" class="btn btn-outline">View Portfolio First</a>
+                </div>
+                <div class="cta-note">✓ No contracts required &nbsp;·&nbsp; ✓ Results within 30 days &nbsp;·&nbsp; ✓
+                    Cancel anytime</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container foot-inner">
+            <div class="foot-brand">
+                <div class="lb">CYBRO.</div>
+                <div class="ls">Future-proof marketing.</div>
+            </div>
+            <div class="foot-links">
+                <a href="index.html">Home</a>
+                <a href="social-media.html">Social Media</a>
+                <a href="ai-automation.html">AI Automation</a>
+                <a href="lead-generation.html">Lead Generation</a>
+                <a href="web-development.html">Web Development</a>
+            </div>
+            <div class="foot-copy">&copy; 2024 Cybro Marketing. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Social Media Marketing","provider":{"@type":"Organization","name":"Cybro Marketing","url":"https://cybromarketing.com"},"description":"Strategic social media marketing, paid ads, and content creation for growing brands.","url":"https://cybromarketing.com/social-media.html"}
+</script>
+    <script>
+        // ── Smooth JS Dropdown ──
+        const dropBtn = document.getElementById('dropBtn');
+        const dropMenu = document.getElementById('dropMenu');
+
+        function closeDropdown() {
+            dropBtn.classList.remove('open');
+            dropMenu.classList.remove('open');
+            dropBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        dropBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            const isOpen = dropMenu.classList.contains('open');
+            if (isOpen) { closeDropdown(); } else {
+                dropBtn.classList.add('open');
+                dropMenu.classList.add('open');
+                dropBtn.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        document.addEventListener('click', e => {
+            if (!dropBtn.contains(e.target) && !dropMenu.contains(e.target)) closeDropdown();
+        });
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDropdown(); });
+
+        // ── Mobile nav ──
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-open');
+        });
+
+        // ── Platform tabs (visual only) ──
+        document.querySelectorAll('.ptab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.ptab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
