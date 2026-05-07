@@ -127,6 +127,26 @@
             overflow: hidden;
             margin-bottom: 20px;
             border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 100px;
+            color: #fff;
+            font-size: 0.7rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            z-index: 2;
         }
 
         .shafaq-item-img img {
@@ -185,59 +205,91 @@
     </header>
 
     <section class="section-container">
+        <h2 style="font-size: 3rem; margin-bottom: 40px; font-family: var(--font-heading); font-weight: 800;">Website Development</h2>
         <div class="grid-shafaq">
-            <!-- Grid Item 1 -->
             <a href="#" class="shafaq-item">
                 <div class="shafaq-item-img">
+                    <span class="project-badge">E-Commerce</span>
                     <img src="portfolio/6.png" alt="High Ticket Funnel">
                 </div>
-                <p>Web Development</p>
+                <p>Tech Corp</p>
                 <h3>High-Ticket Sales Funnel</h3>
             </a>
-
-            <!-- Grid Item 2 -->
             <a href="#" class="shafaq-item">
                 <div class="shafaq-item-img">
-                    <img src="portfolio/4__1_.png" alt="Social Media Creative">
+                    <span class="project-badge">Corporate</span>
+                    <img src="portfolio/2.png" alt="Corporate Site">
                 </div>
-                <p>Ad Creative</p>
-                <h3>Social Meta Campaigns</h3>
+                <p>Logistics Firm</p>
+                <h3>Global Operations Site</h3>
             </a>
-
-            <!-- Grid Item 3 -->
             <a href="#" class="shafaq-item">
                 <div class="shafaq-item-img">
-                    <img src="portfolio/1.png" alt="Restaurant Campaign">
+                    <span class="project-badge">Landing Page</span>
+                    <img src="portfolio/8__1_.png" alt="SaaS Dashboard">
                 </div>
-                <p>Identity & Ads</p>
-                <h3>Restaurant Digital Growth</h3>
-            </a>
-
-            <!-- Grid Item 4 -->
-            <a href="#" class="shafaq-item">
-                <div class="shafaq-item-img">
-                    <img src="portfolio/8__1_.png" alt="Analytics Dashboard">
-                </div>
-                <p>Data & Automation</p>
+                <p>SaaS Startup</p>
                 <h3>Omni-Channel Dashboard</h3>
             </a>
-            
-            <!-- Grid Item 5 -->
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2 style="font-size: 3rem; margin-bottom: 40px; font-family: var(--font-heading); font-weight: 800;">Social Media Design</h2>
+        <div class="grid-shafaq">
             <a href="#" class="shafaq-item">
                 <div class="shafaq-item-img">
-                    <img src="portfolio/2.png" alt="E-Commerce">
+                    <span class="project-badge">Reels</span>
+                    <img src="portfolio/5.png" alt="Reels">
                 </div>
-                <p>Lead Generation</p>
-                <h3>E-Commerce Scaling</h3>
-            </a>
-            
-            <!-- Grid Item 6 -->
-            <a href="#" class="shafaq-item">
-                <div class="shafaq-item-img">
-                    <img src="portfolio/5.png" alt="Thumb Stopping Video">
-                </div>
-                <p>Content Creation</p>
+                <p>Fashion Brand</p>
                 <h3>Viral TikTok Framework</h3>
+            </a>
+            <a href="#" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <span class="project-badge">Carousels</span>
+                    <img src="portfolio/1.png" alt="Restaurant Growth">
+                </div>
+                <p>Gourmet Burgers</p>
+                <h3>Restaurant Digital Identity</h3>
+            </a>
+            <a href="#" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <span class="project-badge">Organic Content</span>
+                    <img src="portfolio/7.png" alt="Organic Content">
+                </div>
+                <p>Fitness App</p>
+                <h3>Community Growth Strategy</h3>
+            </a>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2 style="font-size: 3rem; margin-bottom: 40px; font-family: var(--font-heading); font-weight: 800;">Ad Campaigns</h2>
+        <div class="grid-shafaq">
+            <a href="#" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <span class="project-badge">Mid-Level Ads</span>
+                    <img src="portfolio/4__1_.png" alt="Ad Creative">
+                </div>
+                <p>Local Services</p>
+                <h3>Social Meta Campaigns</h3>
+            </a>
+            <a href="#" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <span class="project-badge">Video Ads</span>
+                    <img src="portfolio/3.png" alt="Video Ads">
+                </div>
+                <p>Tech Gadgets</p>
+                <h3>Product Launch Scaling</h3>
+            </a>
+            <a href="#" class="shafaq-item">
+                <div class="shafaq-item-img">
+                    <span class="project-badge">Retargeting</span>
+                    <img src="portfolio/8.png" alt="Retargeting">
+                </div>
+                <p>E-Commerce</p>
+                <h3>Abandoned Cart Recovery</h3>
             </a>
         </div>
     </section>
