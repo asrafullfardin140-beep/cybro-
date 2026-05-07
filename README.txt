@@ -29,3 +29,5 @@
 ---
 **Need Help?**
 If you have a domain already purchased, let me know the provider (e.g., GoDaddy, Namecheap), and I can give specific instructions for that provider!
+
+Update trigger for Vercel
