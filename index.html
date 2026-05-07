@@ -399,22 +399,15 @@
             .grid-shafaq { grid-template-columns: repeat(2, 1fr); }
             .hero-title { margin-bottom: 20px; }
             .indi-nav { padding: 20px; }
-            .indi-nav-links { display: none; }
+            .indi-nav-links { gap: 20px; font-size: 0.9rem; }
         }
         @media (max-width: 768px) {
             .grid-shafaq { grid-template-columns: 1fr; }
             .clients-marquee { padding: 15px; border-radius: 50px; }
             .clients-marquee img { height: 25px; gap: 30px; }
-        }
-            .hero-title {
-                margin-bottom: 20px;
-            }
-            .indi-nav {
-                padding: 20px;
-            }
-            .indi-nav-links {
-                display: none; /* Switch to hamburger in real dev */
-            }
+            .hero-title { margin-bottom: 20px; }
+            .indi-nav { padding: 15px; flex-direction: column; gap: 15px; }
+            .indi-nav-links { width: 100%; justify-content: center; gap: 15px; }
         }
     </style>
 </head>

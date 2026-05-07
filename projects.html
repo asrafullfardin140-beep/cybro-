@@ -157,12 +157,14 @@
         @media (max-width: 1024px) {
             .grid-shafaq { grid-template-columns: repeat(2, 1fr); }
             .indi-nav { padding: 20px; }
-            .indi-nav-links { display: none; }
+            .indi-nav-links { gap: 20px; font-size: 0.9rem; }
         }
         @media (max-width: 768px) {
             .grid-shafaq { grid-template-columns: 1fr; }
             .page-header { padding: 150px 20px 50px; }
             .section-container { padding: 0 20px 100px; }
+            .indi-nav { padding: 15px; flex-direction: column; gap: 15px; }
+            .indi-nav-links { width: 100%; justify-content: center; gap: 15px; }
         }
     </style>
 </head>
